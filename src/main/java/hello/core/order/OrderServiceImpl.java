@@ -23,4 +23,9 @@ public class OrderServiceImpl implements OrderService{
         int disCount = disCountPolicy.discount(findMember, itemPrice);
         return new Order(memberId, itemName, itemPrice, disCount);
     }
+
+    //테스트 용도
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
 }
